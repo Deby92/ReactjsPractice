@@ -7,11 +7,7 @@ const animals = [{ label: "Horse" }, { label: "Turtle" }, { label: "Elephant" },
  * change the content of the map function
  **/
 const animalsInHTML = animals.map((singleAnimal, i) => {
-	return  <>
-		{animals.map(({ singleAnimal, i }) => (
-	  	<p key={coffee}>Coffee type {coffee} in a {size} size.</p>
-		))}
-  	</>
+	return <li key={i}>{singleAnimal.label}</li>;
 });
 
 ReactDOM.render(<ul>{animalsInHTML}</ul>, document.querySelector("#myDiv"));
